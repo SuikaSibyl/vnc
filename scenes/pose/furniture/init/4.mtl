@@ -1,0 +1,13 @@
+# Blender MTL File: '2a11bfd4-f3df-4ef2-9d0b-6536b0c6510a.blend'
+# Material Count: 1
+
+newmtl solid_wire.002
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.176471 0.176471 0.176471
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd 4.mtl.png

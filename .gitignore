@@ -1,0 +1,50 @@
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtualenvs and local env files
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Experiment outputs and debug dumps
+outputs/
+**/debug/
+out/
+results/
+figures/
+logs/
+tmp/
+temp/
+cache/
+
+# Generated artifacts inside output trees
+outputs/**/*.mp4
+outputs/**/*.gif
+outputs/**/*.exr
+outputs/**/*.npz
+outputs/**/*.npy
+outputs/**/*.pt
+outputs/**/*.pth
+outputs/**/*.obj
+outputs/**/*.ply
+outputs/**/*.stl
+
+# Blender / compiled assets
+*.blend1
+*.blend2

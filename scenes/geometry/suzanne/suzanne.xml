@@ -1,0 +1,296 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+	<default name="spp" value="128"/>
+	<default name="resx" value="960"/>
+	<default name="resy" value="540"/>
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+	<sensor type="perspective" id="Camera">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-155.47387486932942"/>
+			<rotate y="1" angle="-51.48210690667506"/>
+			<rotate z="1" angle="-179.999991348578"/>
+			<translate value="7.335760 4.277965 5.838868"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.001">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="24.549567933763825"/>
+			<rotate y="1" angle="-72.0000566450959"/>
+			<rotate z="1" angle="-4.537331473033444e-06"/>
+			<translate value="8.907274 4.277965 -2.894139"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.002">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="24.532091187225056"/>
+			<rotate y="1" angle="-6.123136524869493"/>
+			<rotate z="1" angle="-2.3390719198340954e-06"/>
+			<translate value="0.999799 4.277965 -9.319748"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.003">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="24.535649715782633"/>
+			<rotate y="1" angle="61.55817955519629"/>
+			<rotate z="1" angle="-6.165858113475608e-06"/>
+			<translate value="-8.240527 4.277965 -4.463410"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.004">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-155.46365690633107"/>
+			<rotate y="1" angle="69.11731383418949"/>
+			<rotate z="1" angle="-179.999991348578"/>
+			<translate value="-8.755795 4.277965 3.340483"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.005">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-155.45316573576594"/>
+			<rotate y="1" angle="4.681823602911056"/>
+			<rotate z="1" angle="-179.999991348578"/>
+			<translate value="-0.764542 4.277965 9.335584"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.006">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="55.724511569993815"/>
+			<rotate y="1" angle="-9.936521638494115"/>
+			<rotate z="1" angle="-4.22870835962819e-06"/>
+			<translate value="1.044948 8.885442 -5.964831"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.007">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="156.11966925535413"/>
+			<rotate y="1" angle="84.64131611944214"/>
+			<rotate z="1" angle="179.99997768819966"/>
+			<translate value="-6.109290 -2.716621 0.573048"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.008">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="158.90536190834382"/>
+			<rotate y="1" angle="-26.925937595078416"/>
+			<rotate z="1" angle="179.999991348578"/>
+			<translate value="3.189001 -2.716621 6.278816"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.009">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-18.555911304990264"/>
+			<rotate y="1" angle="-51.78894632494871"/>
+			<rotate z="1" angle="-2.5498374570218264e-07"/>
+			<translate value="6.358872 -2.716621 -5.005926"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.010">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-119.72350362132377"/>
+			<rotate y="1" angle="-68.56156183199306"/>
+			<rotate z="1" angle="-179.99997768819966"/>
+			<translate value="4.721999 8.885442 1.854186"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.011">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="100.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-125.69524729569264"/>
+			<rotate y="1" angle="56.724570792794154"/>
+			<rotate z="1" angle="-179.999991348578"/>
+			<translate value="-5.337060 8.885442 3.502519"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+	<sensor type="perspective" id="Camera.012">
+		<string name="fov_axis" value="x"/>
+		<float name="fov" value="39.597755"/>
+		<float name="near_clip" value="0.100000"/>
+		<float name="far_clip" value="1000.000000"/>
+		<transform name="to_world">
+			<rotate x="1" angle="-157.2000275971317"/>
+			<rotate y="1" angle="-16.79995504674461"/>
+			<rotate z="1" angle="179.999991348578"/>
+			<translate value="2.426542 3.451290 8.044673"/>
+		</transform>
+		<sampler type="independent">
+			<integer name="sample_count" value="$spp"/>
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="$resx"/>
+			<integer name="height" value="$resy"/>
+		</film>
+	</sensor>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="default-bsdf">
+		<bsdf type="diffuse"/>
+	</bsdf>
+
+<!-- Emitters -->
+
+	<emitter type="envmap" id="World">
+		<string name="filename" value="textures/kloppenheim_06_2k.hdr"/>
+		<float name="scale" value="1.000000"/>
+		<transform name="to_world">
+			<matrix value="0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+	</emitter>
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-source">
+		<string name="filename" value="meshes/source.ply"/>
+		<ref id="default-bsdf" name="bsdf"/>
+		<transform name="to_world">
+			<translate value="2.5 -1.0 0.0"/>
+			<scale value="0.8 0.8 0.8"/>
+		</transform>
+	</shape>
+	<shape type="ply" id="mesh-target">
+		<string name="filename" value="meshes/target.ply"/>
+		<ref id="default-bsdf" name="bsdf"/>
+		<transform name="to_world">
+			<translate value="-2.5 0.0 0.0"/>
+			<scale value="0.8 0.8 0.8"/>
+		</transform>
+	</shape>
+</scene>

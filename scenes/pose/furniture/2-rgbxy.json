@@ -1,0 +1,55 @@
+{
+    "optim_scene_file": "gt",
+    "gt_scene_file": "init",
+    "bbox": 1.0,
+    "resolution": [
+        256,
+        256
+    ],
+    "simple": true,
+    "renderer": {
+        "light_power": 0.5,
+        "background": "gt/0_bg.png",
+        "shading": true
+    },
+    "setting": {
+        "Niter": 1000,
+        "optimizer": "Adam",
+        "learning_rate": 0.02,
+        "view_per_iter": 2,
+        "decay": 0.999,
+        "video_ratio": 0.8
+    },
+    "method": [
+        "rgbxy"
+    ],
+    "seed": 0,
+    "laplacian_loss": false,
+    "matching": {
+        "matcher": "Sinkhorn",
+        "matching_interval": 5
+    },
+    "debug": false,
+    "show": false,
+    "view": {
+        "type": "perspective",
+        "num": 1,
+        "direction": "manual",
+        "dist": 2.0,
+        "fov": 72.0,
+        "znear": 0.1,
+        "zfar": 100.0,
+        "center": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "position": [
+            [
+                0.0,
+                0.0,
+                2.0
+            ]
+        ]
+    }
+}

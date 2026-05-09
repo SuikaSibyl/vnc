@@ -1,0 +1,88 @@
+<scene version="3.0.0">
+    <default name="integrator" value="path" />
+    <default name="spp" value="64" />
+    <default name="resy" value="720" />
+    <default name="resx" value="1280" />
+    <default name="max_depth" value="65" />
+
+    <integrator type="$integrator">
+        <integer name="max_depth" value="$max_depth" />
+    </integrator>
+
+    <!-- Camera -->
+    <sensor type="perspective">
+        <float name="fov" value="35" />
+        <transform name="to_world">
+            <matrix value="-0.00550949 -0.342144 -0.939631 23.895 1.07844e-005 0.939646 -0.342149 11.2207 0.999985 -0.00189103 -0.00519335 0.0400773 0 0 0 1" />
+        </transform>
+        <sampler type="independent">
+            <integer name="sample_count" value="$spp" />
+        </sampler>
+        <film type="hdrfilm">
+            <integer name="width" value="$resx" />
+            <integer name="height" value="$resy" />
+            <string name="file_format" value="openexr" />
+            <string name="pixel_format" value="rgb" />
+            <rfilter type="tent" />
+        </film>
+    </sensor>
+
+    <!-- Floor -->
+    <bsdf type="twosided" id="FloorBSDF">
+        <bsdf type="diffuse">
+            <texture name="reflectance" type="checkerboard">
+                <rgb name="color0" value="0.325, 0.31, 0.25" />
+                <rgb name="color1" value="0.725, 0.71, 0.68" />
+                <transform name="to_uv">
+                    <scale x="10" y="10" />
+                </transform>
+            </texture>
+        </bsdf>
+    </bsdf>
+
+    <shape type="rectangle" id="Floor">
+        <transform name="to_world">
+            <matrix value="-39.9766 39.9766 -1.74743e-006 0 4.94249e-006 2.47125e-006 -56.5355 0 -39.9766 -39.9766 -5.2423e-006 0 0 0 0 1" />
+        </transform>
+        <ref id="FloorBSDF" />
+    </shape>
+
+    <!-- Mesh001: textured alpha -->
+    <shape type="obj" id="Material_0001">
+        <string name="filename" value="models/Mesh001.obj" />
+        <transform name="to_world">
+            <matrix value="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
+        </transform>
+        <bsdf type="twosided">
+            <bsdf type="roughconductor">
+                <string name="distribution" value="ggx" />
+                <texture name="alpha" type="bitmap">
+                    <string name="filename" value="alpha_init.exr" />
+                </texture>
+            </bsdf>
+        </bsdf>
+    </shape>
+
+    <!-- Mesh000: constant alpha -->
+    <shape type="obj" id="Material_0002">
+        <string name="filename" value="models/Mesh000.obj" />
+        <transform name="to_world">
+            <matrix value="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
+        </transform>
+        <bsdf type="twosided">
+            <bsdf type="roughconductor">
+                <string name="distribution" value="ggx" />
+                <float name="alpha" value="0.8" />
+            </bsdf>
+        </bsdf>
+    </shape>
+
+    <!-- Environment light -->
+    <emitter type="envmap">
+        <transform name="to_world">
+            <matrix value="-0.922278 0 0.386527 0 0 1 0 0 -0.386527 0 -0.922278 1.17369 0 0 0 1" />
+        </transform>
+        <string name="filename" value="textures/envmap.hdr" />
+    </emitter>
+
+</scene>
