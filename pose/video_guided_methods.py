@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import imageio
+import numpy as np
 import torch
 import torch.nn.functional as F
 
@@ -40,6 +41,7 @@ class VideoFrameScheduler:
         fallback: torch.Tensor | None = None,
         video_ratio: float = 0.8,
         gt_img: torch.Tensor | dict | None = None,
+        max_frames: int | None = None,
     ) -> None:
         reader = imageio.get_reader(video_path)
         frames = []
@@ -47,6 +49,10 @@ class VideoFrameScheduler:
             image = torch.from_numpy(frame.astype("float32") / 255.0).to(device)[..., :3].flip(0)
             frames.append(resize_image_tensor(image, resolution))
         reader.close()
+
+        if max_frames is not None and max_frames > 0 and len(frames) > max_frames:
+            keep_idx = np.linspace(0, len(frames) - 1, num=max_frames, dtype=int)
+            frames = [frames[idx] for idx in keep_idx]
 
         self.frames = frames
         if fallback is None:

@@ -469,6 +469,12 @@ def main() -> None:
     parser.add_argument("--video-path", type=str, default=str(SCENES_ROOT / "gugugaga" / "videos" / "output.mp4"))
     parser.add_argument("--video-ratio", type=float, default=0.9)
     parser.add_argument(
+        "--video-max-frames",
+        type=int,
+        default=None,
+        help="Optional cap on the number of video frames, sampled evenly across the source video.",
+    )
+    parser.add_argument(
         "--save-trajectory-video",
         action="store_true",
         help="If set, save per-iteration optimization renders as a video for each method.",
@@ -650,6 +656,7 @@ def main() -> None:
                 device=device,
                 fallback=gt_img_drot["images"][0],
                 video_ratio=args.video_ratio,
+                max_frames=args.video_max_frames,
             )
 
         method_data: list[dict] = []
