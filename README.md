@@ -71,3 +71,15 @@ The full launchers can be long-running and require substantial GPU memory. Their
 
 `pose/gnome.py` downloads the Stanford-ORB baseline on first use. `geometry/experiments-curve.sh` and `pose/mirror.ipynb` still contain paths from the original development workspace and need to be adapted before running from a standalone clone.
 
+## Project page development
+
+The `webpage` branch contains the Vue 3 project page, adapted from the [`gilo` webpage template](https://github.com/SuikaSibyl/gilo/tree/webpage).
+
+```bash
+npm install
+npm run serve
+```
+
+Build the GitHub Pages site under `dist/` with `npm run build`. Development uses `/`; production builds use the `/vnc/` base path.
+
+The development server uses polling to remain reliable on machines with a low or exhausted inotify watcher limit. Run `npm run typecheck` for an explicit TypeScript check.

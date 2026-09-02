@@ -1,0 +1,5 @@
+@font-face { font-family: 'AliRegular'; src: url('./AlibabaSans-Regular.otf') format('opentype'); font-display: swap; }
+@font-face { font-family: 'AliLight'; src: url('./AlibabaSans-Light.otf') format('opentype'); font-display: swap; }
+@font-face { font-family: 'AliMedium'; src: url('./AlibabaSans-Medium.otf') format('opentype'); font-display: swap; }
+@font-face { font-family: 'AliBold'; src: url('./AlibabaSans-Bold.otf') format('opentype'); font-display: swap; }
+@font-face { font-family: 'AliHeavy'; src: url('./AlibabaSans-Heavy.otf') format('opentype'); font-display: swap; }
