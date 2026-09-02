@@ -2,12 +2,14 @@
 
 code for SIGGRAPH Asia 2026 paper "Video Numerical Continuation for Differentiable Inverse Rendering".
 
+project page: [https://suikasibyl.github.io/vnc](https://suikasibyl.github.io/vnc)
 
-The repository studies how generated video references can guide inverse-graphics optimization across geometry, pose, articulated motion, lighting, and material parameters. It includes comparisons with pixel losses, RGBXY/DROT, LOIR, and plateau-reduced differentiable rendering.
+![](https://suikasibyl.github.io/files/vnc/teaser.webp "teaser")
+
 
 ## Setup
 
-The experiments require Linux, an NVIDIA GPU, a recent NVIDIA driver, Conda, and Git. Blender and FFmpeg must be available on `PATH` for experiments that convert assets or write videos.
+The experiments require Linux (maybe Windows works as well, I'm not sure), an NVIDIA GPU, a recent NVIDIA driver, Conda, and Git. Blender and FFmpeg must be available on `PATH` for some experiments that convert assets or write videos, but likely you can easily remove them with some hack.
 
 Create the Python environment with:
 
@@ -40,7 +42,7 @@ vnc/
   scripts/
 ```
 
-Scene assets and video references are included under `scenes/`; experiment outputs are written under `outputs/` and are ignored by Git.
+Scene assets and video references are included under `scenes/`; experiment outputs are written under `outputs/`.
 
 ## Experiments
 
